@@ -15,8 +15,9 @@ function App() {
   const [activePage, setActivePage] = useState('dashboard');
 
   const user: User = {
+    id: 'SM001',
     name: 'Sarah Johnson',
-    role: 'Sales Manager',
+    role: 'sales_manager',
   };
 
   const renderPage = () => {

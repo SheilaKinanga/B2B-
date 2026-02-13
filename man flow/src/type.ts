@@ -1,6 +1,8 @@
+export type UserRole = "admin" | "procurement" |"sales_manager" | "viewer";
 export interface User {
+  id: string;
   name: string;
-  role: string;
+  role: UserRole;
   avatar?: string;
 }
 
@@ -18,3 +20,6 @@ export type MenuItem = {
   label: string;
   icon: string;
 };
+
+
+
