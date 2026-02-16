@@ -1,22 +1,24 @@
-import { createContext, useEffect, useState } from "react";
-import type { User } from '../type';
-import type { UserRole } from "../type";
+import {createContext, useContext, useEffect, useState} from "react";
+import type { ReactNode } from "react";
+import type { User, UserRole } from "../type";
 
 type AuthContextType = {
-    user: User | null;
-    login: (role:UserRole) => void;
-    logout: ()=> void;
+  user: User | null;
+  login: (role: UserRole) => void;
+  logout: () => void;
 };
 
-const AuthContext = createContext<AuthContextType | null> (null);
+const AuthContext = createContext<AuthContextType | null>(null);
 
-export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
+export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<User | null>(null);
 
   // Restore session
   useEffect(() => {
     const stored = localStorage.getItem("auth-user");
-    if (stored) setUser(JSON.parse(stored));
+    if (stored) {
+      setUser(JSON.parse(stored));
+    }
   }, []);
 
   const login = (role: UserRole) => {
@@ -42,3 +44,10 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
+export const useAuth = () => {
+  const ctx = useContext(AuthContext);
+  if (!ctx) {
+    throw new Error("useAuth must be used inside AuthProvider");
+  }
+  return ctx;
+};
