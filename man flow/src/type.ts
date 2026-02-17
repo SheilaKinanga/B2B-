@@ -21,5 +21,13 @@ export type MenuItem = {
   icon: string;
 };
 
+export type ProcurementStatus = "pending" | "approved";
+export interface ProcurementItem {
+  id: string;
+  item: string;
+  quantity: number;
+  cost: number;
+  status: ProcurementStatus;
+}
 
 
