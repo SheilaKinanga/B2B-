@@ -154,7 +154,7 @@ export default function Procurement() {
                   {p.item}
                 </p>
                 <p className="text-sm text-gray-500">
-                  Qty: {p.quantity} • Cost: ${p.cost}
+                  Qty: {p.quantity} • Cost: ksh{p.cost}
                 </p>
 
                 <p

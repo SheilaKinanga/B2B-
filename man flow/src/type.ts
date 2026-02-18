@@ -28,6 +28,15 @@ export interface ProcurementItem {
   quantity: number;
   cost: number;
   status: ProcurementStatus;
+
+   createdBy: string;
+  createdAt: string;
+
+  approvedBy?: string;
+  approvedAt?: string;
+
+  rejectedBy?: string;
+  rejectedAt?: string;
 }
 
 
