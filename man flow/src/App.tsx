@@ -1,6 +1,6 @@
 import { useState } from "react";
-import TopNav from "./components/TopNav";
-import Sidebar from "./components/Sidebar";
+import TopNav from "./Components/TopNav";
+import Sidebar from "./Components/Sidebar";
 
 import Dashboard from "./pages/Dashboard";
 import Procurement from "./pages/Procurement";
