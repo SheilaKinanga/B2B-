@@ -1,25 +1,33 @@
-import { Package } from 'lucide-react';
+import { Package } from "lucide-react";
+import "./inventory.css";
 
 export default function Inventory() {
   return (
-    <div className="space-y-6">
-      <div>
-        <h2 className="text-2xl font-bold text-gray-800">Inventory</h2>
-        <p className="text-gray-500 mt-1">
-          Track stock levels and manage warehouse operations
+    <div className="inventory-page">
+      <div className="inventory-header">
+        <h2>Inventory</h2>
+        <p>
+          Track stock levels, monitor warehouse activity, and manage inventory flow in one place.
         </p>
       </div>
 
-      <div className="bg-white rounded-xl border border-gray-200 p-12 text-center">
-        <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-50 rounded-full mb-4">
-          <Package className="w-8 h-8 text-orange-600" />
+      <div className="inventory-card">
+        <div className="inventory-card-content">
+          <div className="inventory-icon">
+            <Package />
+          </div>
+
+          <h3>Inventory Module</h3>
+          <p>
+            Tools for stock management, warehouse operations, and real-time inventory tracking
+            will appear here once configured.
+          </p>
+
+          <div className="inventory-actions">
+            <button className="primary">Add Product</button>
+            <button className="secondary">View Reports</button>
+          </div>
         </div>
-        <h3 className="text-lg font-semibold text-gray-800 mb-2">
-          Inventory Module
-        </h3>
-        <p className="text-gray-500">
-          Stock management, warehouse operations, and inventory tracking will appear here
-        </p>
       </div>
     </div>
   );

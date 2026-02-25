@@ -1,0 +1,113 @@
+/* Inventory Page Layout */
+.inventory-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Header */
+.inventory-header h2 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.inventory-header p {
+  margin-top: 0.25rem;
+  color: #6b7280;
+  max-width: 640px;
+  font-size: 0.875rem;
+}
+
+/* Card */
+.inventory-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+/* Top accent */
+.inventory-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: linear-gradient(to right, #fb923c, #f97316);
+}
+
+/* Card content */
+.inventory-card-content {
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+/* Icon */
+.inventory-icon {
+  width: 64px;
+  height: 64px;
+  background: #ffedd5;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+}
+
+.inventory-icon svg {
+  width: 32px;
+  height: 32px;
+  color: #ea580c;
+}
+
+/* Text */
+.inventory-card-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.inventory-card-content p {
+  color: #6b7280;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+/* Actions */
+.inventory-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.inventory-actions .primary {
+  background: #ea580c;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.inventory-actions .primary:hover {
+  background: #c2410c;
+}
+
+.inventory-actions .secondary {
+  background: transparent;
+  border: 1px solid #d1d5db;
+  color: #374151;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.inventory-actions .secondary:hover {
+  background: #f9fafb;
+}
