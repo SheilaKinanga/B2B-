@@ -12,6 +12,7 @@ import Settings from "./pages/Settings";
 import Login from "./pages/Login";
 
 import { AuthProvider, useAuth } from "./context/AuthContext";
+import "./layouts/AppLayout.css";
 
 /* ---------- APP LAYOUT (LOGGED IN) ---------- */
 function AppLayout() {
