@@ -1,0 +1,23 @@
+/* App shell */
+.app-shell {
+  min-height: 100vh;
+  background: #f9fafb;
+}
+
+/* Main content area */
+.app-content {
+  padding-top: 4rem; /* top nav height */
+  padding-left: 16rem; /* sidebar width */
+  transition: padding-left 0.3s ease;
+}
+
+/* When sidebar is collapsed */
+.app-content.collapsed {
+  padding-left: 4rem;
+}
+
+/* Page wrapper */
+.page-container {
+  padding: 2rem;
+  min-height: calc(100vh - 4rem);
+}
