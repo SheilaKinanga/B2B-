@@ -111,3 +111,8 @@
 .inventory-actions .secondary:hover {
   background: #f9fafb;
 }
+
+/* Subtle row hover for better readability */
+.inventory-table tbody tr:hover {
+  background-color: #f0fdf4; 
+}
