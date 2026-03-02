@@ -28,6 +28,15 @@ const inventoryData = [
   },
 ];
 
+export interface InventoryItem {
+  id: string;
+  name: string;
+  category: string;
+  quantity: number;
+  warehouse: string;
+  reorderLevel: number;
+}
+
 export default function Inventory() {
   return (
     <div className="inventory-page">
